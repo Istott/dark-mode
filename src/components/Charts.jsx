@@ -6,8 +6,9 @@ const Charts = ({ coinData }) => {
     <div className="charts">
       {coinData.map(coin => (
         <div className="chart__container" key={coin.name}>
-          <h2 className="coin__title">{coin.name}</h2>
-          <h4 className="coin__symbol">{coin.symbol}</h4>
+          <h2 className="coin__title">Coin Name: {coin.name}</h2>
+          <h2>Last Updated: {coin.last_updated}</h2>
+          <h4 className="coin__symbol">Coin Symbol: {coin.symbol}</h4>
           <div className="coin__logo">
             <img src={coin.image} height="40" alt={coin.name} />
           </div>

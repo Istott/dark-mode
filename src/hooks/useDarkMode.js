@@ -6,7 +6,7 @@ export const useDarkMode = (key, initialValue) => {
     const [someValue, setSomeValue] = useLocalStorage(key, initialValue);
 
     useEffect(() => {
-        setSomeValue(someValue === true ? body.classList.add('dark-mode') : body.classList.remove('dark-mode'))
+        someValue ? document.body.classList.add('dark-mode') : document.body.classList.remove('dark-mode')
 
     }, [someValue])
 
